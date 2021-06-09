@@ -1,4 +1,4 @@
-let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa/"
+let url = ("https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa");
 
 
 async function callFetchWithGet(){
@@ -6,8 +6,8 @@ async function callFetchWithGet(){
         const options = { 
             method : 'GET', 
             mode : 'cors',
-            headers: headers
-        };
+            headers : headers
+        }
         const output = document.getElementById("json");
         const response = await fetch(url, options);
 
