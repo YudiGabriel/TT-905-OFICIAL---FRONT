@@ -1,4 +1,4 @@
-let url = ("https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa");
+let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa"
 
 
 async function callFetchWithGet(){
