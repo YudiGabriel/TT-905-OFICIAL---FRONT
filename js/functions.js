@@ -13,7 +13,7 @@ async function callFetchWithGet(){
 
         if ( response.status>=200 && response.status <= 300){
             console.log("Funcionou");
-            output.innerHTML = await response.tesxt();
+            output.innerHTML = await response.text();
         } else {
             console.log("Deu errado");
         }
