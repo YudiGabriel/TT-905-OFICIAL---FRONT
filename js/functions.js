@@ -7,7 +7,7 @@ async function callFetchWithGet(){
             method : 'GET', 
             mode : 'cors',
             headers: headers
-        }
+        };
         const output = document.getElementById("json");
         const response = await fetch(url, options);
 
