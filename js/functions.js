@@ -1,7 +1,7 @@
 let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa"
 
 
-async function callFetchWithGet(){
+async function callFetchWithGet(repsipa){
         let headers = new Headers();
         const options = { 
             method : "GET", 
@@ -17,4 +17,31 @@ async function callFetchWithGet(){
         } else {
             console.log("Deu errado");
         }
+}
+
+async function callFetchWithPost(){
+    let headers = new Headers();
+    const options = { 
+        method : "POST", 
+        mode : "cors",
+        headers : headers
+    }
+}
+
+async function callFetchWithPut(){
+    let headers = new Headers();
+    const options = { 
+        method : "PUT", 
+        mode : "cors",
+        headers : headers
+    }
+}
+
+async function callFetchWithDelete(){
+    let headers = new Headers();
+    const options = { 
+        method : "DELETE", 
+        mode : "cors",
+        headers : headers
+    }
 }
