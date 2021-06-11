@@ -1,11 +1,11 @@
 let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa"
 
 
-async function callFetchWithGet() {
+async function callFetchWithGet(){
         let headers = new Headers();
         const options = { 
-            method : 'GET', 
-            mode : 'cors',
+            method : "GET", 
+            mode : "cors",
             headers : headers
         }
         const output = document.getElementById("json");
