@@ -1,7 +1,7 @@
 let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa"
 
 
-async function callFetchWithGet(repsipa){
+async function callFetchWithGet(){
         let headers = new Headers();
         const options = { 
             method : "GET", 
@@ -19,13 +19,22 @@ async function callFetchWithGet(repsipa){
         }
 }
 
-async function callFetchWithPost(){
+async function callFetchWithPost(repsipa){
     let headers = new Headers();
     const options = { 
         method : "POST", 
         mode : "cors",
-        headers : headers
+        headers:{
+
+            'Accept': 'application/json',
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringfy({
+            'mensagem': repsipa
+        })
+
     }
+    await fetch(url, options);
 }
 
 async function callFetchWithPut(){
