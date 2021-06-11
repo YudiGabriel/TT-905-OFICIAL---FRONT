@@ -1,4 +1,4 @@
-let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa"
+let url = "https://tt905-2021-mensagens-gabriel.herokuapp.com/repsipa/"
 
 
 async function callFetchWithGet(){
@@ -54,11 +54,16 @@ async function callFetchWithPut(id, novaMensagem){
 }
    
 
-async function callFetchWithDelete(){
+async function callFetchWithDelete(id){
     let headers = new Headers();
     const options = { 
         method : "DELETE", 
         mode : "cors",
-        headers : headers
+        headers : {
+
+            'Accept': 'application/json',
+            'content-type' : 'application/json'
+        }
     }
+    await fetch(`${url}${id}`, options);
 }
