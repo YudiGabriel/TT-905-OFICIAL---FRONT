@@ -37,14 +37,21 @@ async function callFetchWithPost(repsipa){
     await fetch(url, options);
 }
 
-async function callFetchWithPut(){
-    let headers = new Headers();
+async function callFetchWithPut(id, novaMensagem){
     const options = { 
         method : "PUT", 
         mode : "cors",
-        headers : headers
+        headers :{
+
+            'Accept': 'application/json',
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringfy({
+            'mensagem': repsipa
+        })
     }
 }
+    await fetch(`${url}${id}`, options);
 
 async function callFetchWithDelete(){
     let headers = new Headers();
