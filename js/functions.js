@@ -19,7 +19,7 @@ async function callFetchWithGet(){
         }
 }
 
-async function callFetchWithPost(repsipa){
+async function callFetchWithPost(mensagem){
     let headers = new Headers();
     const options = { 
         method : "POST", 
@@ -29,8 +29,8 @@ async function callFetchWithPost(repsipa){
             'Accept': 'application/json',
             'content-type' : 'application/json'
         },
-        body: JSON.stringfy({
-            'mensagem': repsipa
+        body: JSON.stringify({
+            'mensagem': mensagem
         })
 
     }
@@ -46,12 +46,13 @@ async function callFetchWithPut(id, novaMensagem){
             'Accept': 'application/json',
             'content-type' : 'application/json'
         },
-        body: JSON.stringfy({
-            'mensagem': repsipa
+        body: JSON.stringify({
+            'mensagem': novaMensagem
         })
     }
-}
     await fetch(`${url}${id}`, options);
+}
+   
 
 async function callFetchWithDelete(){
     let headers = new Headers();
