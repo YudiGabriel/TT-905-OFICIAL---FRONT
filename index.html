@@ -14,8 +14,13 @@
         <p id="json"></p>
         <h2>Adicione</h2>
         <form id="postForm">
-            <label for="mensagem"> Adicione: </label>
-            <input type="text" id ="mensagem" name="mensagem"/>
+            <label>Nome: <input type="text"  name="nome" id="nome"/></label> <br><br>
+            <label>Apelido: <input type="text"  name="apelido" id="apelido"/></label> <br><br>
+            <label>Data de Aniversário: <input type="text"  name="data" id="data"/></label> <br><br>
+            <label>Cidade: <input type="text"  name="cidade" id="cidade"/></label> <br><br>
+            <label>Jogo: <input type="text"  name="jogo" id="jogo"/></label> <br><br>
+            <label>Signo: <input type="text"  name="signo" id="signo"/></label> <br><br>
+            <label>Time: <input type="text"  name="time" id="time"/></label> <br><br>
             <button type="submit" onclick="return submitPost()">Enviar</button>
         </form>
 
@@ -23,13 +28,13 @@
         <form id="putForm">
             <label>Id: <input type="text"  name="id"/></label> <br>
             <label>Nome: <input type="text"  name="nome" id="nome"/></label> <br><br>
-            <label>Apelido: <input type="text"  name="nick" id="nick"/></label> <br><br>
+            <label>Apelido: <input type="text"  name="apelido" id="apelido"/></label> <br><br>
             <label>Data de Aniversário: <input type="text"  name="data" id="data"/></label> <br><br>
-            <label>Cidade: <input type="text"  name="city" id="city"/></label> <br><br>
+            <label>Cidade: <input type="text"  name="cidade" id="cidade"/></label> <br><br>
             <label>Jogo: <input type="text"  name="jogo" id="jogo"/></label> <br><br>
             <label>Signo: <input type="text"  name="signo" id="signo"/></label> <br><br>
             <label>Time: <input type="text"  name="time" id="time"/></label> <br><br>
-            <label>Escola: <input type="text"  name="escola" id="escola"/></label> 
+            <label>Escola: <input type="text"  name="escola" id="escola"/></label> <br><br>
             <button type="submit" onclick="return submitPut()">Enviar</button>
         </form>
 

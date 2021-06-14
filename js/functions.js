@@ -19,7 +19,7 @@ async function callFetchWithGet(){
         }
 }
 
-async function callFetchWithPost(nome, nick, data, city, jogo, signo, time, escola){
+async function callFetchWithPost(nome, apelido, data, cidade, jogo, signo, time, escola){
     let headers = new Headers();
     const options = { 
         method : "POST", 
@@ -31,7 +31,7 @@ async function callFetchWithPost(nome, nick, data, city, jogo, signo, time, esco
         },
         body: JSON.stringify({
 
-                nome: "nome", apelido: "nick", data:"data", cidade:"city", jogo:"jogo", signo:"signo", time:"time", escola:"escola"
+                nome: "nome", apelido: "apelido", data:"data", cidade:"cidade", jogo:"jogo", signo:"signo", time:"time", escola:"escola"
              })
 
     }
@@ -75,7 +75,6 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("Entrei na função");
     const form = document.forms['postForm'];
-    const nn = document.forms['nn'].value;
     const mensagem = form["mensagem"].value;
     callFetchWithPost(mensagem);
    return false; //evitar o reload da tela
@@ -84,9 +83,17 @@ function submitPost(){
 function submitPut(){
     const form = document.forms['putForm'];
     const id = form["id"].value
-    const nn = document.forms['nn'].value;
+    const nome = document.forms['nome'].value;
+    const nick = document.forms['nick'].value;
+    const data = document.forms['data'].value;
+    const city = document.forms['city'].value;
+    const jogo = document.forms['jogo'].value;
+    const signo = document.forms['signo'].value;
+    const time = document.forms['time'].value;
+    const escola = document.forms['escola'].value;
+
     // const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, nn);
+    callFetchWithPut(id, nome, nick, city, jogo, signo, time, escola);
    return false; //evitar o reload da tela
 }
 
