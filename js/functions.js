@@ -30,7 +30,7 @@ async function callFetchWithPost(mensagem){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({ "mensagem": {
-            "nn": novaMensagem}
+            "nn": mensagem}
      })
 
     }
