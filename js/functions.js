@@ -31,14 +31,14 @@ async function callFetchWithPost(nome, apelido, data, cidade, jogo, signo, time,
         },
         body: JSON.stringify({
 
-                nome: "nome", apelido: "apelido", data:"data", cidade:"cidade", jogo:"jogo", signo:"signo", time:"time", escola:"escola"
+                'nome': nome, 'apelido': apelido, 'data':data , 'cidade':cidade, 'jogo':jogo, 'signo':signo, 'time':time, 'escola':escola
              })
 
     }
     await fetch(url, options);
 }
 
-async function callFetchWithPut(id, nome, nick, data, city, jogo, signo, time, escola){
+async function callFetchWithPut(id, nnome, napelido, ndata, ncidade, njogo, nsigno, ntime, nescola){
     const options = { 
         method : "PUT", 
         mode : "cors",
@@ -49,7 +49,7 @@ async function callFetchWithPut(id, nome, nick, data, city, jogo, signo, time, e
         },
         body: JSON.stringify({
 
-            nome: "nome", apelido: "nick", data:"data", cidade:"city", jogo:"jogo", signo:"signo", time:"time", escola:"escola"
+            'nome': nnome, 'apelido': napelido, 'data':ndata, 'cidade':ncidade, 'jogo':njogo, 'signo':nsigno , 'time':ntime, 'escola':nescola
          })
     }
     await fetch(`${url}${id}`, options);
@@ -75,32 +75,32 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("Entrei na função");
     const form = document.forms['postForm'];
-    const nome = document.forms['nome'].value;
-    const nick = document.forms['apelido'].value;
-    const data = document.forms['data'].value;
-    const city = document.forms['cidade'].value;
-    const jogo = document.forms['jogo'].value;
-    const signo = document.forms['signo'].value;
-    const time = document.forms['time'].value;
-    const escola = document.forms['escola'].value;
-    callFetchWithPost(mensagem);
+    const nome = form['nome'].value;
+    const apelido = form['apelido'].value;
+    const data = form['data'].value;
+    const cidade = form['cidade'].value;
+    const jogo = form['jogo'].value;
+    const signo = form['signo'].value;
+    const time = form['time'].value;
+    const escola = form['escola'].value;
+    callFetchWithPost(nome, apelido, data,cidade, jogo ,signo, time, escola);
    return false; //evitar o reload da tela
 }
 
 function submitPut(){
     const form = document.forms['putForm'];
     const id = form["id"].value
-    const nome = document.forms['nome'].value;
-    const nick = document.forms['apelido'].value;
-    const data = document.forms['data'].value;
-    const city = document.forms['cidade'].value;
-    const jogo = document.forms['jogo'].value;
-    const signo = document.forms['signo'].value;
-    const time = document.forms['time'].value;
-    const escola = document.forms['escola'].value;
+    const nome = form['nome'].value;
+    const apelido = form['apelido'].value;
+    const data = form['data'].value;
+    const cidade = form['cidade'].value;
+    const jogo = form['jogo'].value;
+    const signo = form['signo'].value;
+    const time = form['time'].value;
+    const escola = form['escola'].value;
 
     // const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, nome, nick, city, jogo, signo, time, escola);
+    callFetchWithPut(id, nome, data, apelido, cidade, jogo, signo, time, escola);
    return false; //evitar o reload da tela
 }
 
