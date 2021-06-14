@@ -75,7 +75,14 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("Entrei na função");
     const form = document.forms['postForm'];
-    const mensagem = form["mensagem"].value;
+    const nome = document.forms['nome'].value;
+    const nick = document.forms['apelido'].value;
+    const data = document.forms['data'].value;
+    const city = document.forms['cidade'].value;
+    const jogo = document.forms['jogo'].value;
+    const signo = document.forms['signo'].value;
+    const time = document.forms['time'].value;
+    const escola = document.forms['escola'].value;
     callFetchWithPost(mensagem);
    return false; //evitar o reload da tela
 }
@@ -84,9 +91,9 @@ function submitPut(){
     const form = document.forms['putForm'];
     const id = form["id"].value
     const nome = document.forms['nome'].value;
-    const nick = document.forms['nick'].value;
+    const nick = document.forms['apelido'].value;
     const data = document.forms['data'].value;
-    const city = document.forms['city'].value;
+    const city = document.forms['cidade'].value;
     const jogo = document.forms['jogo'].value;
     const signo = document.forms['signo'].value;
     const time = document.forms['time'].value;
