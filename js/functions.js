@@ -86,7 +86,7 @@ function submitPut(){
     const id = form["id"].value
     const nn = document.forms['nn'].value;
     const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, mensagem);
+    callFetchWithPut(id, nn, mensagem);
    return false; //evitar o reload da tela
 }
 

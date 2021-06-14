@@ -14,7 +14,7 @@
         <p id="json"></p>
         <h2>Adicione</h2>
         <form id="postForm">
-            <label for="mensagem"> Mensagem: </label>
+            <label for="mensagem"> Adicione: </label>
             <input type="text" id ="mensagem" name="mensagem"/>
             <button type="submit" onclick="return submitPost()">Enviar</button>
         </form>
@@ -22,7 +22,15 @@
         <h2> Altere alguma informação</h2>
         <form id="putForm">
             <label>Id: <input type="text"  name="id"/></label> 
-            <label>Categoria<input type="text"  name="nn" id="nn"/></label> 
+            <label>Nome<input type="text"  name="nome" id="nome"/></label> 
+            <label>Apelido<input type="text"  name="nick" id="nick"/></label> 
+            <label>Data de Aniversário<input type="text"  name="data" id="data"/></label> 
+            <label>Cidade<input type="text"  name="city" id="city"/></label> 
+            <label>Jogo<input type="text"  name="jogo" id="jogo"/></label> 
+            <label>Signo<input type="text"  name="signo" id="signo"/></label> 
+            <label>Time<input type="text"  name="time" id="time"/></label> 
+            <label>Escola<input type="text"  name="escola" id="escola"/></label> 
+
             <label>Mensagem: <input type="text"  name="mensagem"/></label> 
             <button type="submit" onclick="return submitPut()">Enviar</button>
         </form>
