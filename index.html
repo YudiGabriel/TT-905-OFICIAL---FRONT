@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Aula 11 - Atividade 8 
+        </title>
+        <meta charset="UTF-8"></meta>
+        <script src = "js/functions.js"></script>
+    </head>
+    
+    <body>
+        <h2>Formulários</h2>
+        <a href="javascript:callFetchWithGet()">Visualizar</a>
+        <a href="javascript:callFetchWithPost('Vitor')">Adicionar</a>
+        <a href="javascript:callFetchWithPut(3, 'Fabrício')">Alterar</a>
+        <a href="javascript:callFetchWithDelete(1)">Deletar</a>
+        <p id="json"></p>
+        <h2>Adicione</h2>
+        <form id="postForm">
+            <label for="mensagem"> Mensagem: </label>
+            <input type="text" id ="mensagem" name="mensagem"/>
+            <button type="submit" onclick="return submitPost()">Enviar</button>
+        </form>
+
+        <h2> Altere alguma informação</h2>
+        <form id="putForm">
+            <label>Id: <input type="text"  name="id"/></label> 
+            <label>Categoria: <input type="text"  name="nn"/></label> 
+            <label>Mensagem: <input type="text"  name="mensagem"/></label> 
+            <button type="submit" onclick="return submitPut()">Enviar</button>
+        </form>
+
+        <h2> Delete uma informação</h2>
+        <form id="deleteForm">
+            <label>Id: <input type="text"  name="id"/></label> 
+            <button type="submit" onclick="return submitDelete()">Enviar</button>
+        </form>
+    </body> 
+</html>
