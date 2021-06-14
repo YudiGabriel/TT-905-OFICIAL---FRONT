@@ -6,14 +6,16 @@
         </title>
         <meta charset="UTF-8"></meta>
         <script src = "js/functions.js"></script>
+        <link rel="stylesheet" type="text/css" src="css/style.css"></link> 
     </head>
     
     <body>
         <h2>Formulários</h2>
-        <a href="javascript:callFetchWithGet()">Visualizar</a>
+        <!-- <a href="javascript:callFetchWithGet()">Visualizar</a> -->
         <p id="json"></p>
+        <section id="Post">
         <h2>Adicione</h2>
-        <form id="postForm">
+    <form id="postForm">
             <label>Nome: <input type="text"  name="nome" id="nome"/></label> <br><br>
             <label>Apelido: <input type="text"  name="apelido" id="apelido"/></label> <br><br>
             <label>Data de Aniversário: <input type="text"  name="data" id="data"/></label> <br><br>
@@ -24,7 +26,8 @@
             <label>Escola: <input type="text"  name="escola" id="escola"/></label> <br><br>
             <button type="submit" onclick="return submitPost()">Enviar</button>
         </form> 
-
+    </section>
+    <section id="Put">
         <h2> Altere alguma informação</h2>
         <form id="putForm">
             <label>Id: <input type="text"  name="id"/></label> <br>
@@ -38,11 +41,13 @@
             <label>Escola: <input type="text"  name="escola" id="escola"/></label> <br><br>
             <button type="submit" onclick="return submitPut()">Enviar</button>
         </form>
-
+    </section>
+    <section id="Delete">
         <h2> Delete uma informação</h2>
         <form id="deleteForm">
             <label>Id: <input type="text"  name="id"/></label> 
             <button type="submit" onclick="return submitDelete()">Enviar</button>
         </form>
+    </section>
     </body> 
 </html>
