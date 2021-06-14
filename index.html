@@ -22,7 +22,18 @@
         <h2> Altere alguma informação</h2>
         <form id="putForm">
             <label>Id: <input type="text"  name="id"/></label> 
-            <label>Categoria: <input type="text"  name="nn"/></label> 
+            <label>Categoria: <select id ="nn">
+                <option select disable value ="">Selecione</option>
+                <option>Nome</option>
+                <option>Apelido</option>
+                <option>Data</option>
+                <option>Cidade</option>
+                <option>Jogo</option>
+                <option>Signo</option>
+                <option>Time</option>
+                <option>Escola</option>
+                
+            </label> 
             <label>Mensagem: <input type="text"  name="mensagem"/></label> 
             <button type="submit" onclick="return submitPut()">Enviar</button>
         </form>
