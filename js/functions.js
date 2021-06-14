@@ -29,15 +29,15 @@ async function callFetchWithPost(mensagem){
             'Accept': 'application/json',
             'content-type' : 'application/json'
         },
-        body: JSON.stringify({ "mensagem": {
-            "nn": mensagem}
-     })
+        body: JSON.stringify({
+            'mensagem': mensagem
+        })
 
     }
     await fetch(url, options);
 }
 
-async function callFetchWithPut(id, nn, novaMensagem){
+async function callFetchWithPut(id, novaMensagem){
     const options = { 
         method : "PUT", 
         mode : "cors",
@@ -47,10 +47,10 @@ async function callFetchWithPut(id, nn, novaMensagem){
             'content-type' : 'application/json'
         },
         body: JSON.stringify({
-            'mensagem': { "nn": novaMensagem}
+            'mensagem': novaMensagem
         })
     }
-    await fetch(`${url}${id}${nn}`, options);
+    await fetch(`${url}${id}`, options);
 }
    
 
@@ -81,9 +81,8 @@ function submitPost(){
 function submitPut(){
     const form = document.forms['putForm'];
     const id = form["id"].value
-    const nn = form["nn"].value
     const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, nn, mensagem);
+    callFetchWithPut(id, mensagem);
    return false; //evitar o reload da tela
 }
 
