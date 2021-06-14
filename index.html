@@ -21,25 +21,15 @@
 
         <h2> Altere alguma informação</h2>
         <form id="putForm">
-            <label>Id: <input type="text"  name="id" required/></label> 
-            <label for="nn"><strong>Categoria</strong> <select id ="nn">
-                <option select disable value ="" required>Selecione</option>
-                <option>Nome</option>
-                <option>Apelido</option>
-                <option>Data</option>
-                <option>Cidade</option>
-                <option>Jogo</option>
-                <option>Signo</option>
-                <option>Time</option>
-                <option>Escola</option>
-            </label> 
-            <label>     Alteração: <input type="text"  name="mensagem"/></label> 
+            <label>Id: <input type="text"  name="id"/></label> 
+            <label>Categoria<input type="text"  name="nn" id="nn"/></label> 
+            <label>Mensagem: <input type="text"  name="mensagem"/></label> 
             <button type="submit" onclick="return submitPut()">Enviar</button>
         </form>
 
         <h2> Delete uma informação</h2>
         <form id="deleteForm">
-            <label>Id: <input type="text"  name="id" required/></label> 
+            <label>Id: <input type="text"  name="id"/></label> 
             <button type="submit" onclick="return submitDelete()">Enviar</button>
         </form>
     </body> 
