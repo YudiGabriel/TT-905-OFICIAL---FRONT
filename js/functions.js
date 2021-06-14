@@ -100,7 +100,7 @@ function submitPut(){
     const escola = form['escola'].value;
 
     // const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, nome, data, apelido, cidade, jogo, signo, time, escola);
+    callFetchWithPut(id, nome, apelido, data, cidade, jogo, signo, time, escola);
    return false; //evitar o reload da tela
 }
 
